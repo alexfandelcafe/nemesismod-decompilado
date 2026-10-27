@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{8D9D402E-6C01-4B93-938D-D55153BFB814}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NemesisMod</RootNamespace>
+    <AssemblyName>NemesisMod</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\Red Dead Redemption 2\scripts\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScriptHookRDRNetAPI" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="NemesisSystem\Acquaintance.cs" />
+    <Compile Include="NemesisSystem\Agenda.cs" />
+    <Compile Include="NemesisSystem\ApiCheck.cs" />
+    <Compile Include="NemesisSystem\Article.cs" />
+    <Compile Include="NemesisSystem\Backstory.cs" />
+    <Compile Include="NemesisSystem\BackstoryResult.cs" />
+    <Compile Include="NemesisSystem\Balance.cs" />
+    <Compile Include="NemesisSystem\Battle.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\Ammo.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\AmmoKind.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\Anatomy.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\AnimalAnatomy.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\AnimalBones.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\Blow.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\BlowKind.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\BonePoint.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\BulletImpactModule.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\BulletImpactSettings.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\CrippleLevel.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\CrippleRules.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\CrippleTracker.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\DamageItem.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\ImpactDetector.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\ImpactRecord.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\NemesisFate.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\NemesisTag.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\PathResult.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\Projection.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\Severity.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\V3.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\WeaponClass.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\WoundReport.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\XRayAnalysis.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\XRayComposite.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\XRayEntry.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\XRayLog.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\XRayQuality.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\XRayRenderer.cs" />
+    <Compile Include="NemesisSystem\BulletImpact\XRayViewer.cs" />
+    <Compile Include="NemesisSystem\CampCandidateRow.cs" />
+    <Compile Include="NemesisSystem\CampKit.cs" />
+    <Compile Include="NemesisSystem\CampRow.cs" />
+    <Compile Include="NemesisSystem\Camps.cs" />
+    <Compile Include="NemesisSystem\CampsContent.cs" />
+    <Compile Include="NemesisSystem\CampSite.cs" />
+    <Compile Include="NemesisSystem\CampTakeover.cs" />
+    <Compile Include="NemesisSystem\CardCast.cs" />
+    <Compile Include="NemesisSystem\CardFile.cs" />
+    <Compile Include="NemesisSystem\CardWhen.cs" />
+    <Compile Include="NemesisSystem\ConvoKind.cs" />
+    <Compile Include="NemesisSystem\CrimeProfile.cs" />
+    <Compile Include="NemesisSystem\Crumbs.cs" />
+    <Compile Include="NemesisSystem\DeathNews.cs" />
+    <Compile Include="NemesisSystem\Devotion.cs" />
+    <Compile Include="NemesisSystem\Disposition.cs" />
+    <Compile Include="NemesisSystem\District.cs" />
+    <Compile Include="NemesisSystem\DistrictRow.cs" />
+    <Compile Include="NemesisSystem\DoorRow.cs" />
+    <Compile Include="NemesisSystem\DoorsContent.cs" />
+    <Compile Include="NemesisSystem\Downed.cs" />
+    <Compile Include="NemesisSystem\EncounterCard.cs" />
+    <Compile Include="NemesisSystem\EncounterKind.cs" />
+    <Compile Include="NemesisSystem\EventStory.cs" />
+    <Compile Include="NemesisSystem\FactionContent.cs" />
+    <Compile Include="NemesisSystem\FactionsContent.cs" />
+    <Compile Include="NemesisSystem\GameDate.cs" />
+    <Compile Include="NemesisSystem\Gang.cs" />
+    <Compile Include="NemesisSystem\Gangs.cs" />
+    <Compile Include="NemesisSystem\Goal.cs" />
+    <Compile Include="NemesisSystem\GrudgeAction.cs" />
+    <Compile Include="NemesisSystem\GrudgeOrigin.cs" />
+    <Compile Include="NemesisSystem\GunMelee.cs" />
+    <Compile Include="NemesisSystem\Habit.cs" />
+    <Compile Include="NemesisSystem\Hate.cs" />
+    <Compile Include="NemesisSystem\HateTier.cs" />
+    <Compile Include="NemesisSystem\HistoryEntry.cs" />
+    <Compile Include="NemesisSystem\Holdings.cs" />
+    <Compile Include="NemesisSystem\HoldingsAct.cs" />
+    <Compile Include="NemesisSystem\HoldingsEvent.cs" />
+    <Compile Include="NemesisSystem\IHoldingsWorld.cs" />
+    <Compile Include="NemesisSystem\IniFile.cs" />
+    <Compile Include="NemesisSystem\IniPanel.cs" />
+    <Compile Include="NemesisSystem\Intent.cs" />
+    <Compile Include="NemesisSystem\InterroLines.cs" />
+    <Compile Include="NemesisSystem\Joaat.cs" />
+    <Compile Include="NemesisSystem\KeyCombo.cs" />
+    <Compile Include="NemesisSystem\Kids.cs" />
+    <Compile Include="NemesisSystem\LeaderSeat.cs" />
+    <Compile Include="NemesisSystem\LifeCond.cs" />
+    <Compile Include="NemesisSystem\LifeContent.cs" />
+    <Compile Include="NemesisSystem\LifeContentRow.cs" />
+    <Compile Include="NemesisSystem\LifeEvent.cs" />
+    <Compile Include="NemesisSystem\LifeRow.cs" />
+    <Compile Include="NemesisSystem\LifeT.cs" />
+    <Compile Include="NemesisSystem\LivesContent.cs" />
+    <Compile Include="NemesisSystem\Loadout.cs" />
+    <Compile Include="NemesisSystem\Memory.cs" />
+    <Compile Include="NemesisSystem\MenuTab.cs" />
+    <Compile Include="NemesisSystem\MercyNote.cs" />
+    <Compile Include="NemesisSystem\Mind.cs" />
+    <Compile Include="NemesisSystem\Models.cs" />
+    <Compile Include="NemesisSystem\NameBank.cs" />
+    <Compile Include="NemesisSystem\NemesisMod.cs" />
+    <Compile Include="NemesisSystem\NemesisRecord.cs" />
+    <Compile Include="NemesisSystem\NemesisSettings.cs" />
+    <Compile Include="NemesisSystem\Newspaper.cs" />
+    <Compile Include="NemesisSystem\Notoriety.cs" />
+    <Compile Include="NemesisSystem\OurRole.cs" />
+    <Compile Include="NemesisSystem\PastEntry.cs" />
+    <Compile Include="NemesisSystem\PenPal.cs" />
+    <Compile Include="NemesisSystem\Personalities.cs" />
+    <Compile Include="NemesisSystem\Personality.cs" />
+    <Compile Include="NemesisSystem\PlacesContent.cs" />
+    <Compile Include="NemesisSystem\Plan.cs" />
+    <Compile Include="NemesisSystem\Pron.cs" />
+    <Compile Include="NemesisSystem\QuestionRow.cs" />
+    <Compile Include="NemesisSystem\Questions.cs" />
+    <Compile Include="NemesisSystem\QuestionsContent.cs" />
+    <Compile Include="NemesisSystem\Quirks.cs" />
+    <Compile Include="NemesisSystem\Ray.cs" />
+    <Compile Include="NemesisSystem\RosterMenu.cs" />
+    <Compile Include="NemesisSystem\SafeFile.cs" />
+    <Compile Include="NemesisSystem\SavePointMeta.cs" />
+    <Compile Include="NemesisSystem\Scar.cs" />
+    <Compile Include="NemesisSystem\Seeds.cs" />
+    <Compile Include="NemesisSystem\Setting.cs" />
+    <Compile Include="NemesisSystem\Sight.cs" />
+    <Compile Include="NemesisSystem\SlicedJson.cs" />
+    <Compile Include="NemesisSystem\Smarts.cs" />
+    <Compile Include="NemesisSystem\Sociability.cs" />
+    <Compile Include="NemesisSystem\StartupTrace.cs" />
+    <Compile Include="NemesisSystem\StashSpot.cs" />
+    <Compile Include="NemesisSystem\StoryCast.cs" />
+    <Compile Include="NemesisSystem\StoryGang.cs" />
+    <Compile Include="NemesisSystem\TaleRow.cs" />
+    <Compile Include="NemesisSystem\TalesContent.cs" />
+    <Compile Include="NemesisSystem\Taunts.cs" />
+    <Compile Include="NemesisSystem\Telegram.cs" />
+    <Compile Include="NemesisSystem\TelegramLines.cs" />
+    <Compile Include="NemesisSystem\TemperProfile.cs" />
+    <Compile Include="NemesisSystem\Tempers.cs" />
+    <Compile Include="NemesisSystem\Theme.cs" />
+    <Compile Include="NemesisSystem\Thought.cs" />
+    <Compile Include="NemesisSystem\Tie.cs" />
+    <Compile Include="NemesisSystem\TownCast.cs" />
+    <Compile Include="NemesisSystem\TownRepParts.cs" />
+    <Compile Include="NemesisSystem\TownRow.cs" />
+    <Compile Include="NemesisSystem\TownTalk.cs" />
+    <Compile Include="NemesisSystem\Traits.cs" />
+    <Compile Include="NemesisSystem\UiDraw.cs" />
+    <Compile Include="NemesisSystem\UiFeed.cs" />
+    <Compile Include="NemesisSystem\UiMouse.cs" />
+    <Compile Include="NemesisSystem\WarRecord.cs" />
+    <Compile Include="NemesisSystem\Wealth.cs" />
+    <Compile Include="NemesisSystem\WelcomeGuide.cs" />
+    <Compile Include="NemesisSystem\WelcomePics.cs" />
+    <Compile Include="NemesisSystem\WildcardsContent.cs" />
+    <Compile Include="NemesisSystem\WorldEvent.cs" />
+    <Compile Include="NemesisSystem\WorldLife.cs" />
+    <Compile Include="NemesisSystem\WorldPart.cs" />
+    <Compile Include="NemesisSystem\WorldState.cs" />
+    <Compile Include="NemesisSystem\WoundKeys.cs" />
+    <Compile Include="NemesisSystem\XPad.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="doors.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
